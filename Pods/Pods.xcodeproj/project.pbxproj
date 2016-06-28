@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A8445C4C759BB51A3320DB395AB4295 /* HRColorCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = B47EC8E675194EB33E18C7EC2F4653B4 /* HRColorCursor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D402E944456A46BC35A466C19FC341A /* HRHSVColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CE5E3DFED5A167A6B69D861534F7D9 /* HRHSVColorUtil.m */; };
+		16D429EAA6C41B28F1D675E5897F6DBE /* HRBrightnessSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F0D46B2EDB26906B66DA6CB5FE91F84 /* HRBrightnessSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		176B8E64CB0030FEBBEFBD0BCA0D9055 /* HRColorInfoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 73E803F00AD12DC1C38F4C896288BC65 /* HRColorInfoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1820BF0714109AC59CF7815E4C0FE641 /* UIImage+CoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 976C2AB31559E53FF819A4D8DE75E213 /* UIImage+CoreGraphics.m */; };
+		1DF3F31DA9A188A74888671DA36E63F4 /* HRBrightnessCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = B83A643375A9CB93ED1BDB81C4A1F624 /* HRBrightnessCursor.m */; };
+		397AE1D76B53C77818618FB5EC4706BB /* HRColorInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8458563E914137187C499B3124782C5 /* HRColorInfoView.m */; };
+		39A837690E549A15ED2779A75451F7F0 /* HRBrightnessSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 770022566404A7EEC31D094B08BBDCD6 /* HRBrightnessSlider.m */; };
+		3AD9DEE0D27BF3B662348D3F8ECEE5FC /* HRColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC94C5FB0FDE0C2749E498BB976DEE76 /* HRColorPickerView.m */; };
+		3DE8BFF25D562B007914942C350A3CBB /* HRColorPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 447FA34B50439F3650DD275CFB4F1DCC /* HRColorPickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C518DD88E60DC8F41E6EDE031F26174 /* HRColorCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CFFD2122960E76A2D1AC6DC43C60E7 /* HRColorCursor.m */; };
+		5E8F59F24EEF73890CE3748C3280CA93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		64916E7543407BB7649DC9C94E189500 /* UIImage+CoreGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 3275169101106F36A211A8A936CD25D7 /* UIImage+CoreGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA63F78E2499AD6FE29A53F1D6A26392 /* Pods-Eterna Chat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7A8187D4B92B6E71750443C14FA202 /* Pods-Eterna Chat-dummy.m */; };
+		CA3D1A1375D271A9ADAE59EBB5BF2698 /* HRColorMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2056F811B3E6D80EF160D6721956F38D /* HRColorMapView.m */; };
+		CE847F8E4D05A39BD93422C9D70A247A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		D57F683341674C7A7D48A0C99C163660 /* HRHSVColorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B7CD6855A81B360158E4E7A5DF00BDE /* HRHSVColorUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5864DAFF8ECDBFBE5AEEE6A0CFF883B /* HRColorMapView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03ABBD047CB849C2074A0C48B149082C /* HRColorMapView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E501878013FD37E6DF0FF78B2C9A507B /* Color-Picker-for-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5CCA522ADF8828E6252CE38FF1BC5C /* Color-Picker-for-iOS-dummy.m */; };
+		F3E2CC3E109B55B339A42790AD234EB1 /* HRBrightnessCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 793FC5D9188089E6FF2962407EA15F9D /* HRBrightnessCursor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52A8B09373C3CCF7A5D9AA11B3398C85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A78C3A05A5998BFD2C6B372328EAE74;
+			remoteInfo = "Color-Picker-for-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03ABBD047CB849C2074A0C48B149082C /* HRColorMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorMapView.h; path = ColorPicker/HRColorMapView.h; sourceTree = "<group>"; };
+		04CE5E3DFED5A167A6B69D861534F7D9 /* HRHSVColorUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRHSVColorUtil.m; path = ColorPicker/HRHSVColorUtil.m; sourceTree = "<group>"; };
+		095277EA539339FCA62247068B2EBBE2 /* Pods-Eterna Chat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Eterna Chat.debug.xcconfig"; sourceTree = "<group>"; };
+		0D7E2F7C669EF5D1E0D5343F689091E1 /* Pods-Eterna Chat-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Eterna Chat-frameworks.sh"; sourceTree = "<group>"; };
+		1B7CD6855A81B360158E4E7A5DF00BDE /* HRHSVColorUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRHSVColorUtil.h; path = ColorPicker/HRHSVColorUtil.h; sourceTree = "<group>"; };
+		2056F811B3E6D80EF160D6721956F38D /* HRColorMapView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorMapView.m; path = ColorPicker/HRColorMapView.m; sourceTree = "<group>"; };
+		3275169101106F36A211A8A936CD25D7 /* UIImage+CoreGraphics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+CoreGraphics.h"; path = "ColorPicker/UIImage+CoreGraphics.h"; sourceTree = "<group>"; };
+		3B5CCA522ADF8828E6252CE38FF1BC5C /* Color-Picker-for-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Color-Picker-for-iOS-dummy.m"; sourceTree = "<group>"; };
+		447FA34B50439F3650DD275CFB4F1DCC /* HRColorPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorPickerView.h; path = ColorPicker/HRColorPickerView.h; sourceTree = "<group>"; };
+		54D2CDA17F394E3DFCE3A1EFAE93CE54 /* Pods-Eterna Chat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Eterna Chat.release.xcconfig"; sourceTree = "<group>"; };
+		66A47017C26C77CCFF0576E03B3CF162 /* libPods-Eterna Chat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Eterna Chat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73E803F00AD12DC1C38F4C896288BC65 /* HRColorInfoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorInfoView.h; path = ColorPicker/HRColorInfoView.h; sourceTree = "<group>"; };
+		770022566404A7EEC31D094B08BBDCD6 /* HRBrightnessSlider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRBrightnessSlider.m; path = ColorPicker/HRBrightnessSlider.m; sourceTree = "<group>"; };
+		793FC5D9188089E6FF2962407EA15F9D /* HRBrightnessCursor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRBrightnessCursor.h; path = ColorPicker/HRBrightnessCursor.h; sourceTree = "<group>"; };
+		7C61218849DEBAD9C1C931AE590C162B /* libColor-Picker-for-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libColor-Picker-for-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0D46B2EDB26906B66DA6CB5FE91F84 /* HRBrightnessSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRBrightnessSlider.h; path = ColorPicker/HRBrightnessSlider.h; sourceTree = "<group>"; };
+		906445F21325AA7E2579BCC2E7622102 /* Color-Picker-for-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Color-Picker-for-iOS.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		976C2AB31559E53FF819A4D8DE75E213 /* UIImage+CoreGraphics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CoreGraphics.m"; path = "ColorPicker/UIImage+CoreGraphics.m"; sourceTree = "<group>"; };
+		9E7A8187D4B92B6E71750443C14FA202 /* Pods-Eterna Chat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Eterna Chat-dummy.m"; sourceTree = "<group>"; };
+		A0444B6804D3AF6C6EE47B0177878D5C /* Pods-Eterna Chat-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Eterna Chat-acknowledgements.plist"; sourceTree = "<group>"; };
+		AF988E47B995D04F2B401F65BDF8709C /* Pods-Eterna Chat-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Eterna Chat-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B47EC8E675194EB33E18C7EC2F4653B4 /* HRColorCursor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorCursor.h; path = ColorPicker/HRColorCursor.h; sourceTree = "<group>"; };
+		B83A643375A9CB93ED1BDB81C4A1F624 /* HRBrightnessCursor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRBrightnessCursor.m; path = ColorPicker/HRBrightnessCursor.m; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CF33C062533509CFC18038EC8A0163B3 /* Color-Picker-for-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Color-Picker-for-iOS-prefix.pch"; sourceTree = "<group>"; };
+		D8CFFD2122960E76A2D1AC6DC43C60E7 /* HRColorCursor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorCursor.m; path = ColorPicker/HRColorCursor.m; sourceTree = "<group>"; };
+		E8458563E914137187C499B3124782C5 /* HRColorInfoView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorInfoView.m; path = ColorPicker/HRColorInfoView.m; sourceTree = "<group>"; };
+		EC94C5FB0FDE0C2749E498BB976DEE76 /* HRColorPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorPickerView.m; path = ColorPicker/HRColorPickerView.m; sourceTree = "<group>"; };
+		EDCF6445046D706023C7073D136C6D6C /* Pods-Eterna Chat-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Eterna Chat-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A3D4162199CF04FCD67B65B84194E6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE847F8E4D05A39BD93422C9D70A247A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA29C95B37F02B7C5DC3E0573A06EC77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E8F59F24EEF73890CE3748C3280CA93 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F7875BC2AA465454A05140429350B54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DBBB870ED919698A347ADE4727EEEBF /* Color-Picker-for-iOS */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		148436C49861BB1B93A78D8838706EB9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A809CC365B825B258A38FA98A27CF6C /* Pods-Eterna Chat */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		451A2B0E0082681DEC190DB164DA004E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				906445F21325AA7E2579BCC2E7622102 /* Color-Picker-for-iOS.xcconfig */,
+				3B5CCA522ADF8828E6252CE38FF1BC5C /* Color-Picker-for-iOS-dummy.m */,
+				CF33C062533509CFC18038EC8A0163B3 /* Color-Picker-for-iOS-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Color-Picker-for-iOS";
+			sourceTree = "<group>";
+		};
+		4DBBB870ED919698A347ADE4727EEEBF /* Color-Picker-for-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				793FC5D9188089E6FF2962407EA15F9D /* HRBrightnessCursor.h */,
+				B83A643375A9CB93ED1BDB81C4A1F624 /* HRBrightnessCursor.m */,
+				7F0D46B2EDB26906B66DA6CB5FE91F84 /* HRBrightnessSlider.h */,
+				770022566404A7EEC31D094B08BBDCD6 /* HRBrightnessSlider.m */,
+				B47EC8E675194EB33E18C7EC2F4653B4 /* HRColorCursor.h */,
+				D8CFFD2122960E76A2D1AC6DC43C60E7 /* HRColorCursor.m */,
+				73E803F00AD12DC1C38F4C896288BC65 /* HRColorInfoView.h */,
+				E8458563E914137187C499B3124782C5 /* HRColorInfoView.m */,
+				03ABBD047CB849C2074A0C48B149082C /* HRColorMapView.h */,
+				2056F811B3E6D80EF160D6721956F38D /* HRColorMapView.m */,
+				447FA34B50439F3650DD275CFB4F1DCC /* HRColorPickerView.h */,
+				EC94C5FB0FDE0C2749E498BB976DEE76 /* HRColorPickerView.m */,
+				1B7CD6855A81B360158E4E7A5DF00BDE /* HRHSVColorUtil.h */,
+				04CE5E3DFED5A167A6B69D861534F7D9 /* HRHSVColorUtil.m */,
+				3275169101106F36A211A8A936CD25D7 /* UIImage+CoreGraphics.h */,
+				976C2AB31559E53FF819A4D8DE75E213 /* UIImage+CoreGraphics.m */,
+				451A2B0E0082681DEC190DB164DA004E /* Support Files */,
+			);
+			path = "Color-Picker-for-iOS";
+			sourceTree = "<group>";
+		};
+		69354034434421C96CBD9C767458DAB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C61218849DEBAD9C1C931AE590C162B /* libColor-Picker-for-iOS.a */,
+				66A47017C26C77CCFF0576E03B3CF162 /* libPods-Eterna Chat.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				0F7875BC2AA465454A05140429350B54 /* Pods */,
+				69354034434421C96CBD9C767458DAB7 /* Products */,
+				148436C49861BB1B93A78D8838706EB9 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8A809CC365B825B258A38FA98A27CF6C /* Pods-Eterna Chat */ = {
+			isa = PBXGroup;
+			children = (
+				AF988E47B995D04F2B401F65BDF8709C /* Pods-Eterna Chat-acknowledgements.markdown */,
+				A0444B6804D3AF6C6EE47B0177878D5C /* Pods-Eterna Chat-acknowledgements.plist */,
+				9E7A8187D4B92B6E71750443C14FA202 /* Pods-Eterna Chat-dummy.m */,
+				0D7E2F7C669EF5D1E0D5343F689091E1 /* Pods-Eterna Chat-frameworks.sh */,
+				EDCF6445046D706023C7073D136C6D6C /* Pods-Eterna Chat-resources.sh */,
+				095277EA539339FCA62247068B2EBBE2 /* Pods-Eterna Chat.debug.xcconfig */,
+				54D2CDA17F394E3DFCE3A1EFAE93CE54 /* Pods-Eterna Chat.release.xcconfig */,
+			);
+			name = "Pods-Eterna Chat";
+			path = "Target Support Files/Pods-Eterna Chat";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		269FA443B6B8CA9DB0B0C3127248894E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3E2CC3E109B55B339A42790AD234EB1 /* HRBrightnessCursor.h in Headers */,
+				16D429EAA6C41B28F1D675E5897F6DBE /* HRBrightnessSlider.h in Headers */,
+				0A8445C4C759BB51A3320DB395AB4295 /* HRColorCursor.h in Headers */,
+				176B8E64CB0030FEBBEFBD0BCA0D9055 /* HRColorInfoView.h in Headers */,
+				D5864DAFF8ECDBFBE5AEEE6A0CFF883B /* HRColorMapView.h in Headers */,
+				3DE8BFF25D562B007914942C350A3CBB /* HRColorPickerView.h in Headers */,
+				D57F683341674C7A7D48A0C99C163660 /* HRHSVColorUtil.h in Headers */,
+				64916E7543407BB7649DC9C94E189500 /* UIImage+CoreGraphics.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9A78C3A05A5998BFD2C6B372328EAE74 /* Color-Picker-for-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 147A0C0AD1140A4BECF20B28CD5826F7 /* Build configuration list for PBXNativeTarget "Color-Picker-for-iOS" */;
+			buildPhases = (
+				5480CD9644D78F6E98FE841276AA12A8 /* Sources */,
+				2A3D4162199CF04FCD67B65B84194E6E /* Frameworks */,
+				269FA443B6B8CA9DB0B0C3127248894E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Color-Picker-for-iOS";
+			productName = "Color-Picker-for-iOS";
+			productReference = 7C61218849DEBAD9C1C931AE590C162B /* libColor-Picker-for-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BC70B7702F2150A54C053D35832EDA4B /* Pods-Eterna Chat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27D896118542E3F26687F94B672EAABB /* Build configuration list for PBXNativeTarget "Pods-Eterna Chat" */;
+			buildPhases = (
+				FB9A7CC8FEB1F47F96D6FC974A900952 /* Sources */,
+				BA29C95B37F02B7C5DC3E0573A06EC77 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05B9294335B3CB13082EA508C28328EB /* PBXTargetDependency */,
+			);
+			name = "Pods-Eterna Chat";
+			productName = "Pods-Eterna Chat";
+			productReference = 66A47017C26C77CCFF0576E03B3CF162 /* libPods-Eterna Chat.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 69354034434421C96CBD9C767458DAB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A78C3A05A5998BFD2C6B372328EAE74 /* Color-Picker-for-iOS */,
+				BC70B7702F2150A54C053D35832EDA4B /* Pods-Eterna Chat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5480CD9644D78F6E98FE841276AA12A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E501878013FD37E6DF0FF78B2C9A507B /* Color-Picker-for-iOS-dummy.m in Sources */,
+				1DF3F31DA9A188A74888671DA36E63F4 /* HRBrightnessCursor.m in Sources */,
+				39A837690E549A15ED2779A75451F7F0 /* HRBrightnessSlider.m in Sources */,
+				4C518DD88E60DC8F41E6EDE031F26174 /* HRColorCursor.m in Sources */,
+				397AE1D76B53C77818618FB5EC4706BB /* HRColorInfoView.m in Sources */,
+				CA3D1A1375D271A9ADAE59EBB5BF2698 /* HRColorMapView.m in Sources */,
+				3AD9DEE0D27BF3B662348D3F8ECEE5FC /* HRColorPickerView.m in Sources */,
+				0D402E944456A46BC35A466C19FC341A /* HRHSVColorUtil.m in Sources */,
+				1820BF0714109AC59CF7815E4C0FE641 /* UIImage+CoreGraphics.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9A7CC8FEB1F47F96D6FC974A900952 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA63F78E2499AD6FE29A53F1D6A26392 /* Pods-Eterna Chat-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05B9294335B3CB13082EA508C28328EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Color-Picker-for-iOS";
+			target = 9A78C3A05A5998BFD2C6B372328EAE74 /* Color-Picker-for-iOS */;
+			targetProxy = 52A8B09373C3CCF7A5D9AA11B3398C85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1BDCE1C2169E027C1830631ED1F38A62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54D2CDA17F394E3DFCE3A1EFAE93CE54 /* Pods-Eterna Chat.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		80D7058C1CC7FB06A4C5FC2F81156299 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 906445F21325AA7E2579BCC2E7622102 /* Color-Picker-for-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Color-Picker-for-iOS/Color-Picker-for-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AB75330382241A54EAD2575767ACC9DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 095277EA539339FCA62247068B2EBBE2 /* Pods-Eterna Chat.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BCF5F3794AE5F090ACEC2BC76D11DF9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 906445F21325AA7E2579BCC2E7622102 /* Color-Picker-for-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Color-Picker-for-iOS/Color-Picker-for-iOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C59323C0AF9835D43E537B0278D40792 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D06140ADEFCCD220BB56AE36D6EFB697 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		147A0C0AD1140A4BECF20B28CD5826F7 /* Build configuration list for PBXNativeTarget "Color-Picker-for-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D7058C1CC7FB06A4C5FC2F81156299 /* Debug */,
+				BCF5F3794AE5F090ACEC2BC76D11DF9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27D896118542E3F26687F94B672EAABB /* Build configuration list for PBXNativeTarget "Pods-Eterna Chat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB75330382241A54EAD2575767ACC9DD /* Debug */,
+				1BDCE1C2169E027C1830631ED1F38A62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D06140ADEFCCD220BB56AE36D6EFB697 /* Debug */,
+				C59323C0AF9835D43E537B0278D40792 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
