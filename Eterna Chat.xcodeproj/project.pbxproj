@@ -444,7 +444,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Eterna Chat";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "249670c2-690f-492a-851c-5ca3ff508dc0";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -460,7 +460,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Eterna Chat";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "249670c2-690f-492a-851c-5ca3ff508dc0";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -111,11 +111,29 @@
 
 // Load the chat history
 - (void) loadHistory {
+
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:@"http://174.129.26.87/sites/output.html"] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if(error != nil) {
+            NSLog(@"Error loading chat history: %@", error);
+        } else {
+            NSString* result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSMutableArray *lines = [[result componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]] mutableCopy];
+            for (int i = 0; i < [lines count] - 1; i++) // last one in lines arr is a newline char/whitespace
+            {
+                NSString *lineMessage = [NSString stringWithFormat:@"%@", [lines objectAtIndex:i]];
+                NSLog(@"Adding message %@", lineMessage);
+                [self performSelectorOnMainThread:@selector(formatAndAddMessage:)withObject:lineMessage waitUntilDone:YES];
+                // [self formatAndAddMessage:lineMessage];
+            }
+        }
+    }];
+    [dataTask resume];
     
     // Download the chat history from the server HTML page
-    NSString * result = NULL;
-    NSError *err = nil;
-    NSURL * urlToRequest = [NSURL   URLWithString:@"http://174.129.26.87/sites/output.html"];
+    /*NSString * result = NULL;
+    NSError *err = nil; // 174.129.26.87 / sites / output . html
+    NSURL * urlToRequest = [NSURL   URLWithString:@"http://[::ffff:ae81:1a57]/sites/output.html"];
     if(urlToRequest)
     {
         result = [NSString stringWithContentsOfURL: urlToRequest
@@ -133,7 +151,7 @@
     {
         NSString *lineMessage = [NSString stringWithFormat:@"%@", [lines objectAtIndex:i]];
         [self formatAndAddMessage:lineMessage];
-    }
+    }*/
 }
 
 // Initialize a connection using the input/output streams to the IRC chat server
@@ -148,7 +166,13 @@
     CFWriteStreamRef writeStream;
     
     // Connect to the IRC server on the 6667 port
-    CFStreamCreatePairWithSocketToHost(NULL, (CFStringRef)@"174.129.26.87", 6667, &readStream, &writeStream);
+    
+    // 174.129.26.87
+    NSURL * urlToRequest = [NSURL URLWithString:@"174.129.26.87"];
+    NSString *result = [urlToRequest absoluteString];
+    NSLog(@"%@", result);
+    
+    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef) result, 6667, &readStream, &writeStream);
     
     inputStream = (__bridge NSInputStream *)readStream;
     outputStream = (__bridge NSOutputStream *)writeStream;
@@ -433,8 +457,8 @@
     [self sendMessage:response];
     
     // Have the user connect to the server
-    // Note that the server ignores the hostname and servername, so these are set to bogus values
-    NSString *response2  = [NSString stringWithFormat:@"USER %@ %@ eternachat %@\r\n", ident, @"174.129.26.87", realName];
+    // Note that the server ignores the hostname and servername, so these are set to bogus 'eternachat' values
+    NSString *response2  = [NSString stringWithFormat:@"USER %@ eternachat eternachat %@\r\n", ident, realName];
     [self sendMessage:response2];
     
 }
