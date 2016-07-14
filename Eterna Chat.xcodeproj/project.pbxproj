@@ -438,13 +438,13 @@
 			baseConfigurationReference = 1D2BD92F83F2EA0FA6B0766F /* Pods-Eterna Chat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = Login/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Eterna Chat";
-				PROVISIONING_PROFILE = "249670c2-690f-492a-851c-5ca3ff508dc0";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -454,13 +454,13 @@
 			baseConfigurationReference = 29F4602DD50ECD3F774CBB18 /* Pods-Eterna Chat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = Login/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "Eterna Chat";
-				PROVISIONING_PROFILE = "249670c2-690f-492a-851c-5ca3ff508dc0";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -8,6 +8,10 @@
 
 #import "HomeViewController.h"
 #import "AppDelegate.h"
+#include <sys/socket.h>
+#include <netdb.h>
+#include <arpa/inet.h>
+#include <err.h>
 
 @interface HomeViewController () {
     
@@ -109,31 +113,54 @@
     return YES;
 }
 
+// Gets an IP value from an IPv4 literal
+// This returned value can either be ipv4 or ipv6, depending on router support
+// For more info check out apple's new requirements on supporting ipv6 networks
+// For testing, try running iPhone/simulator on wifi, then iPhone on wifi nat64
+// network emulated by mac through ethernet
+- (NSString*) getIPValue:(NSString*)literal {
+    
+    struct addrinfo hints;
+    struct addrinfo *addrs, *addr;
+
+    const char *ipv4_str = [literal UTF8String];
+    
+    memset(&hints, 0, sizeof(hints));
+    hints.ai_family = PF_UNSPEC;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_flags = AI_DEFAULT;
+    getaddrinfo(ipv4_str, "http", &hints, &addrs);
+
+    char host[NI_MAXHOST];
+    
+    for (addr = addrs; addr; addr = addr->ai_next) {
+        
+        getnameinfo(addr->ai_addr, addr->ai_addrlen, host, sizeof(host), NULL, 0, NI_NUMERICHOST);
+        // printf("%s\n", host);
+        
+    }
+    freeaddrinfo(addrs);
+    return [NSString stringWithCString:host encoding:NSUTF8StringEncoding];
+}
+
 // Load the chat history
 - (void) loadHistory {
-
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:@"http://174.129.26.87/sites/output.html"] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        if(error != nil) {
-            NSLog(@"Error loading chat history: %@", error);
-        } else {
-            NSString* result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            NSMutableArray *lines = [[result componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]] mutableCopy];
-            for (int i = 0; i < [lines count] - 1; i++) // last one in lines arr is a newline char/whitespace
-            {
-                NSString *lineMessage = [NSString stringWithFormat:@"%@", [lines objectAtIndex:i]];
-                NSLog(@"Adding message %@", lineMessage);
-                [self performSelectorOnMainThread:@selector(formatAndAddMessage:)withObject:lineMessage waitUntilDone:YES];
-                // [self formatAndAddMessage:lineMessage];
-            }
-        }
-    }];
-    [dataTask resume];
     
     // Download the chat history from the server HTML page
-    /*NSString * result = NULL;
-    NSError *err = nil; // 174.129.26.87 / sites / output . html
-    NSURL * urlToRequest = [NSURL   URLWithString:@"http://[::ffff:ae81:1a57]/sites/output.html"];
+    NSString * result = NULL;
+    NSError *err = nil;
+    NSString* siteip = [self getIPValue:@"174.129.26.87"];
+    NSURL *urlToRequest;
+    
+    if ([siteip rangeOfString:@"::"].location == NSNotFound) {
+        // ipv4
+        urlToRequest = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/sites/output.html", siteip]];
+    } else {
+        // the ip is ipv6 literal, so use square brackets around it
+        urlToRequest = [NSURL URLWithString:[NSString stringWithFormat:@"http://[%@]/sites/output.html", siteip]];
+    }
+    
+    //NSLog(@"%@", urlToRequest);
     if(urlToRequest)
     {
         result = [NSString stringWithContentsOfURL: urlToRequest
@@ -151,7 +178,7 @@
     {
         NSString *lineMessage = [NSString stringWithFormat:@"%@", [lines objectAtIndex:i]];
         [self formatAndAddMessage:lineMessage];
-    }*/
+    }
 }
 
 // Initialize a connection using the input/output streams to the IRC chat server
@@ -166,13 +193,8 @@
     CFWriteStreamRef writeStream;
     
     // Connect to the IRC server on the 6667 port
-    
-    // 174.129.26.87
-    NSURL * urlToRequest = [NSURL URLWithString:@"174.129.26.87"];
-    NSString *result = [urlToRequest absoluteString];
-    NSLog(@"%@", result);
-    
-    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef) result, 6667, &readStream, &writeStream);
+    NSString* siteip = [self getIPValue:@"174.129.26.87"];
+    CFStreamCreatePairWithSocketToHost(NULL, (__bridge CFStringRef)siteip, 6667, &readStream, &writeStream);
     
     inputStream = (__bridge NSInputStream *)readStream;
     outputStream = (__bridge NSOutputStream *)writeStream;
@@ -390,9 +412,10 @@
         // When an error occurs, display an alert window
         case NSStreamEventErrorOccurred:
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"An error occured with connecting to chat - please check your internet connection." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil ];
-            alert.tag = 100;
-            [alert show];
+
+            //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"An error occured with connecting to chat - please check your internet connection." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil ];
+            //alert.tag = 100;
+            //[alert show];
             
             break;
         }
@@ -436,7 +459,7 @@
     [outputStream write:[data bytes] maxLength:[data length]];
 }
 
-// Joins the IRC chat server with the given usernamd and user ID
+// Joins the IRC chat server with the given username and user ID
 - (void) joinChat:(NSString *)username withUID:(NSString *)uid {
     
     // Creates a unique username to enter the IRC server by
